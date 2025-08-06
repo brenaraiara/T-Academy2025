@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Facil_Positivo_Negativo_Zero {
+public class Facil1_Positivo_Negativo_Zero {
     //Verifique se um número é positivo, negativo ou zero.
 
     public static void main(String[] args) {

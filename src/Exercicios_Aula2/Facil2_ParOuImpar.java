@@ -2,7 +2,9 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Facil_ParOuImpar {
+public class Facil2_ParOuImpar {
+    //Determine se um número é par ou ímpar.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
