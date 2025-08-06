@@ -4,6 +4,8 @@ import java.time.Year;
 import java.util.Scanner;
 
 public class Medio7_AnoBissexto {
+    // Determine se um ano é bissexto ou não.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
