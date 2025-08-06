@@ -11,9 +11,9 @@ public class Facil_Positivo_Negativo_Zero {
         System.out.print("Informe um número: ");
         int numero = scan.nextInt();
 
-        if (numero > 0){
+        if (numero > 0) {
             System.out.println("O número informado é positivo");
-        }else if (numero < 0){
+        } else if (numero < 0) {
             System.out.println("O número informado é negativo");
         } else {
             System.out.println("O número informado é zero");
