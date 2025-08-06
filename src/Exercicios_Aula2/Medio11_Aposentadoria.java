@@ -3,6 +3,8 @@ package Exercicios_Aula2;
 import java.util.Scanner;
 
 public class Medio11_Aposentadoria {
+    //Decida se uma pessoa pode se aposentar (idade igual ou superior a 65 anos) ou não.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
