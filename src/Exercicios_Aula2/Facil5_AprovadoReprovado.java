@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Facil5_AprovadoReprovado {
     //Decida se um aluno foi aprovado (nota maior ou igual a 60) ou reprovado.
+
     public static void main(String[] args) {
         final double NOTA_MINIMA = 60.0;
         Scanner scan = new Scanner(System.in);
