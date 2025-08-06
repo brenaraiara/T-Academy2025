@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Facil5_AprovadoReprovado {
+public class Facil05_AprovadoReprovado {
     //Decida se um aluno foi aprovado (nota maior ou igual a 60) ou reprovado.
 
     public static void main(String[] args) {

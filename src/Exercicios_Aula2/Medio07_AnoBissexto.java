@@ -3,7 +3,7 @@ package Exercicios_Aula2;
 import java.time.Year;
 import java.util.Scanner;
 
-public class Medio7_AnoBissexto {
+public class Medio07_AnoBissexto {
     // Determine se um ano é bissexto ou não.
 
     public static void main(String[] args) {

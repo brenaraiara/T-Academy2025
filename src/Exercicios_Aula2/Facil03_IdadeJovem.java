@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Facil3_IdadeJovem {
+public class Facil03_IdadeJovem {
     //Classifique a idade do usuario como "jovem" (menos de 30 anos) ou "não jovem" (65 anos ou mais).
 
     public static void main(String[] args) {

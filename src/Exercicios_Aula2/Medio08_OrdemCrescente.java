@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Medio8_OrdemCrescente {
+public class Medio08_OrdemCrescente {
     //Classifique três números em ordem crescente.
 
     public static void main(String[] args) {

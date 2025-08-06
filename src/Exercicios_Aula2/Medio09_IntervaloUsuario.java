@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Medio9_IntervaloUsuario {
+public class Medio09_IntervaloUsuario {
     //Verifique se um número está dentro de um intervalo especificado pelo usuario.
 
     public static void main(String[] args) {

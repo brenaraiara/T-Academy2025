@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Facil4_Divisivel3e5 {
+public class Facil04_Divisivel3e5 {
    //Verifique se um número é divisível por 3 e 5.
 
     public static void main(String[] args) {
