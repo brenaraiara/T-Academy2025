@@ -3,7 +3,7 @@ package Exercicios_Aula2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class L1_Q18_Anagrama {
+public class Lista1_Q18_Anagrama {
     //Verifique se uma palavra é um anagrama de outra.
 
     public static void main(String[] args) {
