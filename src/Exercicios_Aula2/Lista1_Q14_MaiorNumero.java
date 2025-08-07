@@ -3,6 +3,8 @@ package Exercicios_Aula2;
 import java.util.Scanner;
 
 public class Lista1_Q14_MaiorNumero {
+    //Decida qual é o maior de três números.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
