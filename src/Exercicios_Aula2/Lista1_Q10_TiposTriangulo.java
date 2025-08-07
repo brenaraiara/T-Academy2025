@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Medio10_TiposTriangulo {
+public class Lista1_Q10_TiposTriangulo {
     //Determine se um triângulo é equilátero, isósceles ou escaleno
 
     public static void main(String[] args) {

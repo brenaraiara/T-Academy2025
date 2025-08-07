@@ -2,7 +2,7 @@ package Exercicios_Aula2;
 
 import java.util.Scanner;
 
-public class Intermediario12_ClassificacaoMedia {
+public class Lista1_Q12_ClassificacaoMedia {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
