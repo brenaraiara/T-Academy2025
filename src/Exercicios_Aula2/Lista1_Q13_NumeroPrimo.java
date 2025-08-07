@@ -3,6 +3,8 @@ package Exercicios_Aula2;
 import java.util.Scanner;
 
 public class Lista1_Q13_NumeroPrimo {
+    //Determine se um número é primo ou não.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
