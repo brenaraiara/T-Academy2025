@@ -2,7 +2,7 @@ package Exercicios_Aula3;
 
 import java.util.Scanner;
 
-public class Lista2_Q2_PositivoNegativo {
+public class Lista2_Q02_PositivoNegativo {
     // Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
 
     public static void main(String[] args) {
