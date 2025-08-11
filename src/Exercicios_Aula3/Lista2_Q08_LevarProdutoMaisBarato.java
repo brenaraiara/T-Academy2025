@@ -2,7 +2,7 @@ package Exercicios_Aula3;
 
 import java.util.Scanner;
 
-public class Lista2_Q09_LevarProdutoMaisBarato {
+public class Lista2_Q08_LevarProdutoMaisBarato {
     //Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
 
     public static void main(String[] args) {
