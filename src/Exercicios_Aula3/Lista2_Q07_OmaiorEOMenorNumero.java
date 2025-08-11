@@ -3,6 +3,8 @@ package Exercicios_Aula3;
 import java.util.Scanner;
 
 public class Lista2_Q07_OmaiorEOMenorNumero {
+    //Faça um Programa que leia três números e mostre o maior e o menor deles.
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
