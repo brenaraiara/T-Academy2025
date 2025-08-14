@@ -1,5 +1,6 @@
 package Projeto1_GestaoPadaria;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -68,6 +69,16 @@ public class PedidoService {
                     pedido.setCliente(cliente);
                     System.out.println("Bem-vindo " + cliente.getNome());
                     existe = true;
+
+                    // Verificar aniversário
+                    LocalDate hoje = LocalDate.now();
+                    if (cliente.getDataNascimento() != null &&
+                            cliente.getDataNascimento().getDayOfMonth() == hoje.getDayOfMonth() &&
+                            cliente.getDataNascimento().getMonth() == hoje.getMonth()) {
+
+                        System.out.println("Parabéns! Hoje é aniversário do cliente " + cliente.getNome() + "!");
+                    }
+
                     break;
                 }
             }

@@ -1,6 +1,7 @@
 package Projeto1_GestaoPadaria;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -22,11 +23,15 @@ public class Estoque {
         itens.add(item);
     }
 
-    public void removerProduto(ItemEstoque item) {
-        itens.remove(item);
+    // Remoção silenciosa (para pedidos)
+    public void removerItemPeloIndice(int index) {
+        if (index >= 0 && index < itens.size()) {
+            itens.remove(index);
+        }
     }
 
-    public void removerItemPeloIndice(int index) {
+    // Remoção com mensagem (para menu)
+    public void removerItemPeloIndiceComMensagem(int index) {
         if (index >= 0 && index < itens.size()) {
             itens.remove(index);
             System.out.println("Item removido com sucesso.");
@@ -65,4 +70,41 @@ public class Estoque {
             System.out.println(i);
         }
     }
+
+    public void mostrarAlertaDeValidade(){
+        System.out.println("--------ALERTA DE VALIDADE--------");
+        LocalDate hoje = LocalDate.now();
+        boolean encontrou = false;
+
+        for (ItemEstoque item : itens){
+            long diasParaVencer = ChronoUnit.DAYS.between(hoje, item.getDataValidade());
+            if (diasParaVencer<0){
+                System.out.println(item.getNome()+" já venceu em "+ item.getDataValidade());
+                encontrou=true;
+            } else if (diasParaVencer<=3){
+                System.out.println(item.getNome()+ " vai vencer em "+diasParaVencer+ " dias ("+item.getDataValidade()+ ")");
+            }
+        }
+        if (!encontrou){
+            System.out.println("Nenhum produto próximo da validade.");
+        }
+    }
+
+    public void mostrarAlertaDeValidadeHoje() {
+        System.out.println("---- ALERTA DE VALIDADE (HOJE) ----");
+        LocalDate hoje = LocalDate.now();
+        boolean encontrou = false;
+
+        for (ItemEstoque item : itens) {
+            if (item.getDataValidade().isEqual(hoje)) {
+                System.out.println(item.getNome() + " vence hoje (" + item.getDataValidade() + ")");
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            System.out.println("Nenhum produto vence hoje.");
+        }
+    }
+
 }

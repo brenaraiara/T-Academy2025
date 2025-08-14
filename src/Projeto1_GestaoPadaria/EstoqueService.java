@@ -24,12 +24,12 @@ public class EstoqueService {
         estoque.listarItens();
     }
 
-    // Remove item pelo nome e adiciona ao pedido
+    // Remover item do estoque **sem mensagem** (para pedidos)
     public boolean removerItemDoEstoque(String nome, Pedido pedido) {
         for (int i = 0; i < estoque.getItens().size(); i++) {
             if (estoque.getItens().get(i).getProduto().getNome().equalsIgnoreCase(nome)) {
                 pedido.adicionarItem(estoque.getItens().get(i));
-                estoque.removerItemPeloIndice(i);
+                estoque.removerItemPeloIndice(i); // versão silenciosa
                 return true;
             }
         }
@@ -73,13 +73,13 @@ public class EstoqueService {
         System.out.println("Item adicionado!");
     }
 
-    // Remover item pelo índice
+    // Remover item **com mensagem** (menu)
     public void removerItem() {
         estoque.listarItensComIndice();
         System.out.print("Digite o índice do item para remover: ");
         int index = sc.nextInt() - 1;
         sc.nextLine();
-        estoque.removerItemPeloIndice(index);
+        estoque.removerItemPeloIndiceComMensagem(index);
     }
 
     // Listar itens por validade

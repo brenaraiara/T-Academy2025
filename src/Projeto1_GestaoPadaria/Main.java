@@ -26,6 +26,17 @@ public class Main {
         EstoqueService estoqueService = new EstoqueService(estoque, sc);
         PedidoService pedidoService = new PedidoService(pedidos, clientes, funcionarios, estoqueService, sc);
 
+        // Alertas ao iniciar
+        System.out.println("\n-----ALERTAS DO DIA-----");
+
+        // ALERTA DE VALIDADE
+        System.out.println("\n---- ALERTA DE VALIDADE ----");
+        estoque.mostrarAlertaDeValidade(); // imprime apenas os produtos próximos do vencimento
+
+        // ALERTA DE ANIVERSÁRIO DE FUNCIONÁRIO
+        System.out.println("\n---- ALERTA DE ANIVERSÁRIO ----");
+        Funcionario.mostrarAniversariantesHoje(funcionarios);
+
         // Loop do menu principal
         while (true) {
             try {

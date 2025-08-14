@@ -1,5 +1,6 @@
 package Projeto1_GestaoPadaria;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Cliente {
@@ -8,13 +9,15 @@ public class Cliente {
     private String nome;
     private String cpf;
     private String telefone;
+    private LocalDate dataNascimento;
     private ArrayList<Pedido> pedidos = new ArrayList<>();
 
-    public Cliente(String nome, String cpf, String telefone) {
+    public Cliente(String nome, String cpf, String telefone, LocalDate dataNascimento) {
         this.codigo = proximoCodigo++;
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
+        this.dataNascimento = dataNascimento;
     }
 
     public String getCpf() {
@@ -36,6 +39,8 @@ public class Cliente {
     public void adicionarPedido(Pedido p) {
         pedidos.add(p);
     }
+
+    public LocalDate getDataNascimento() { return dataNascimento;}
 
     @Override
     public String toString() {

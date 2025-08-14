@@ -1,5 +1,7 @@
 package Projeto1_GestaoPadaria;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -39,19 +41,41 @@ public class ClienteService {
         String cpf = sc.nextLine();
         System.out.print("Digite o telefone do cliente: ");
         String telefone = sc.nextLine();
-        adicionarCliente(nome, cpf, telefone);
+
+        System.out.println("Digite a data de nascimento (dd/MM/yyyy): ");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate nascimento = LocalDate.parse(sc.nextLine(), formatter);
     }
+
+    public void mostrarAniversariosHoje() {
+        LocalDate hoje = LocalDate.now();
+        boolean encontrouAniversariante = false;
+
+        for (Cliente cliente : clientes) {
+            if (cliente.getDataNascimento().getDayOfMonth() == hoje.getDayOfMonth() &&
+                    cliente.getDataNascimento().getMonth() == hoje.getMonth()) {
+
+                System.out.println("Hoje é aniversário do cliente " + cliente.getNome() + "!");
+                encontrouAniversariante = true;
+            }
+        }
+
+        if (!encontrouAniversariante) {
+            System.out.println("Nenhum cliente faz aniversário hoje.");
+        }
+    }
+
 
     // Remover cliente via menu
     private void removerClienteMenu() {
         System.out.print("Digite o CPF do cliente a ser removido: ");
         String cpf = sc.nextLine();
         removerCliente(cpf);
-    }
+    };
 
     // Adicionar cliente diretamente
-    public void adicionarCliente(String nome, String cpf, String telefone) {
-        Cliente novoCliente = new Cliente(nome, cpf, telefone);
+    public void adicionarCliente(String nome, String cpf, String telefone, LocalDate nascimento) {
+        Cliente novoCliente = new Cliente(nome, cpf, telefone, nascimento);
         clientes.add(novoCliente);
         System.out.println("Cliente adicionado com sucesso: " + novoCliente);
     }
